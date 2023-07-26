@@ -1,0 +1,9 @@
+https://codemyui.com/footer-reveal-animation-with-jquery/
+
+https://freefrontend.com/css-scroll-effects/
+
+https://codepen.io/HenryZarza/pen/VwYagOO
+
+https://freefrontend.com/css-scroll-effects/
+
+https://scrollmagic.io/examples/basic/reveal_on_scroll.html#:~:text=A%20good%20practice%20is%20to,the%20wrapper%20as%20the%20trigger.&text=I%20will%20be%20revealed%20when,and%20hidden%20when%20scrolled%20past.&text=I%20will%20stay%20visible%20once%20revealed.&text=Multiple%20elements%20can%20be%20looped,as%20they%20enter%20the%20viewport.
