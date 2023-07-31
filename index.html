@@ -1,63 +1,552 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      defer
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      defer
+    ></script>
+    <script src="script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  </head>
+  <body>
     <!-- Navigation -->
 
     <nav class="navbar sticky-top" id="navbar">
-        <div class="nav-container">
-            <img src="./img/logo.png" alt="" class="logo-img">
-            <ul id="menu" class="menu">
-                <li><a href="#">Locations</a></li>
-                <li><a href="#">Doctor</a></li>
-            </ul>
-        </div>
+      <div class="nav-container">
+        <img src="./img/logo.png" alt="" class="logo-img" />
+        <ul id="menu" class="menu">
+          <li><a href="#">Locations</a></li>
+          <li><a href="#">Doctor</a></li>
+        </ul>
+      </div>
     </nav>
 
     <!-- download the app section -->
 
     <header class="header">
-        <div class="heading">
+      <div class="heading">
         <h3>Download the Aartas- Healthcare App X X X-></h3>
-    </div>
+      </div>
     </header>
 
-   
+    <main class="container">
+      <!-- Hero section -->
+      <section class="hero inner" id="section1">
+        <h1 class="heading-main">
+          Leading Doctors of
+          <span id="slide-text" class="slide"></span>
+        </h1>
+      </section>
 
-    <main class="">
-         <!-- Hero section -->
-        <section class="hero section-a" id="section1">
-            <h1 class="heading-main ">
-               Leading Doctors of
-                <span id="slide-text" class="slide scroller"></span>
-              </h1>
-        </section>
-    
-        <!-- Headline hero -->
-        <section class="scroll-container">
-            <div class="scroll-element js-scroll slide-down">
-                <section class="headline-hero" id="section2">
-                    <div class="headline-text">
-                        <h2 class="headline-heading">Headline about how Drs of all specialities are present in Aartas</h2>
-                        <p class="headline-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore libero facere, veniam ducimus dolorum repellendus deleniti laborum vel officiis quia!</p>
-                    </div>
-            
-                    <div class="headline-img">
-                        <img src="./img/hero_doctor.png" alt="">
-                    </div>
-                </section>
+      <!-- Headline hero -->
+      <section class="scroll-container">
+        <div class="scroll-element js-scroll slide-down slide-up">
+          <section class="headline-hero" id="section2">
+            <div class="headline-text">
+              <h2 class="headline-heading">
+                Headline about how Drs of all specialities are present in Aartas
+              </h2>
+              <p class="headline-para">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore
+                libero facere, veniam ducimus dolorum repellendus deleniti
+                laborum vel officiis quia!
+              </p>
             </div>
-           
+
+            <div class="headline-img">
+              <img src="./img/hero_doctor.png" alt="" />
+            </div>
           </section>
+        </div>
+      </section>
     </main>
 
- 
+    <!-- section about Doctor's information -->
+    <section class="about_doctor">
+      <div class="scroll-menu">
+        <div class="content-wrapper">
+          <ul>
+            <li class="doctor_list"><a href="#">All</a></li>
+            <li class="doctor_list"><a href="#">Haematology</a></li>
+            <li class="doctor_list"><a href="#">Psychiatry</a></li>
+            <li class="doctor_list"><a href="#">Dermatology</a></li>
+            <li class="doctor_list"><a href="#">Physiotherapy</a></li>
+            <li class="doctor_list"><a href="#">Neurology</a></li>
+            <li class="doctor_list"><a href="#">Orthopaedic</a></li>
+            <li class="doctor_list"><a href="#">Gynaecology</a></li>
+            <li class="doctor_list"><a href="#">Men's Sexual Health</a></li>
+            <li class="doctor_list"><a href="#">Child Health</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="scroll-doctor-info">
+        <div class="row_1">
+          <div class="cards">
+            <div class="card">
+              <div class="card-img">
+                <img src="./img/Dr_Ankur.png" />
+              </div>
+              <div class="card-body">
+                <h2 class="card-title">Dr. Ankur Nanda</h2>
+                <p class="card-intro">
+                  MBBS, MD <br />
+                  (Internal Medicine)
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img">
+                <img src="./img/Dr_Suparno.png" />
+              </div>
+              <div class="card-body">
+                <h2 class="card-title">Dr. Suparno Chakrabarti</h2>
+                <p class="card-intro">
+                  MBBS, MD <br />
+                  (Internal Medicine)
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img">
+                <img src="./img/Dr_Ankur.png" />
+              </div>
+              <div class="card-body">
+                <h2 class="card-title">Dr. Ankur Nanda</h2>
+                <p class="card-intro">
+                  MBBS, MD <br />
+                  (Internal Medicine)
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img">
+                <img src="./img/Dr_Suparno.png" />
+              </div>
+              <div class="card-body">
+                <h2 class="card-title">Dr. Suparno Chakrabarti</h2>
+                <p class="card-intro">
+                  MBBS, MD <br />
+                  (Internal Medicine)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row_2">
+          <div class="cards">
+            <div class="card">
+              <div class="card-img">
+                <img src="./img/Dr_Ankur.png" />
+              </div>
+              <div class="card-body">
+                <h2 class="card-title">Dr. Ankur Nanda</h2>
+                <p class="card-intro">
+                  MBBS, MD <br />
+                  (Internal Medicine)
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img">
+                <img src="./img/Dr_Suparno.png" />
+              </div>
+              <div class="card-body">
+                <h2 class="card-title">Dr. Suparno Chakrabarti</h2>
+                <p class="card-intro">
+                  MBBS, MD <br />
+                  (Internal Medicine)
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img">
+                <img src="./img/Dr_Ankur.png" />
+              </div>
+              <div class="card-body">
+                <h2 class="card-title">Dr. Ankur Nanda</h2>
+                <p class="card-intro">
+                  MBBS, MD <br />
+                  (Internal Medicine)
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img">
+                <img src="./img/Dr_Suparno.png" />
+              </div>
+              <div class="card-body">
+                <h2 class="card-title">Dr. Suparno Chakrabarti</h2>
+                <p class="card-intro">
+                  MBBS, MD <br />
+                  (Internal Medicine)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row_3">
+          <div class="cards">
+            <div class="card">
+              <div class="card-img">
+                <img src="./img/Dr_Ankur.png" />
+              </div>
+              <div class="card-body">
+                <h2 class="card-title">Dr. Ankur Nanda</h2>
+                <p class="card-intro">
+                  MBBS, MD <br />
+                  (Internal Medicine)
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img">
+                <img src="./img/Dr_Suparno.png" />
+              </div>
+              <div class="card-body">
+                <h2 class="card-title">Dr. Suparno Chakrabarti</h2>
+                <p class="card-intro">
+                  MBBS, MD <br />
+                  (Internal Medicine)
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img">
+                <img src="./img/Dr_Ankur.png" />
+              </div>
+              <div class="card-body">
+                <h2 class="card-title">Dr. Ankur Nanda</h2>
+                <p class="card-intro">
+                  MBBS, MD <br />
+                  (Internal Medicine)
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img">
+                <img src="./img/Dr_Suparno.png" />
+              </div>
+              <div class="card-body">
+                <h2 class="card-title">Dr. Suparno Chakrabarti</h2>
+                <p class="card-intro">
+                  MBBS, MD <br />
+                  (Internal Medicine)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row_4">
+          <div class="cards">
+            <div class="card">
+              <div class="card-img">
+                <img src="./img/Dr_Ankur.png" />
+              </div>
+              <div class="card-body">
+                <h2 class="card-title">Dr. Ankur Nanda</h2>
+                <p class="card-intro">
+                  MBBS, MD <br />
+                  (Internal Medicine)
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img">
+                <img src="./img/Dr_Suparno.png" />
+              </div>
+              <div class="card-body">
+                <h2 class="card-title">Dr. Suparno Chakrabarti</h2>
+                <p class="card-intro">
+                  MBBS, MD <br />
+                  (Internal Medicine)
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img">
+                <img src="./img/Dr_Ankur.png" />
+              </div>
+              <div class="card-body">
+                <h2 class="card-title">Dr. Ankur Nanda</h2>
+                <p class="card-intro">
+                  MBBS, MD <br />
+                  (Internal Medicine)
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img">
+                <img src="./img/Dr_Suparno.png" />
+              </div>
+              <div class="card-body">
+                <h2 class="card-title">Dr. Suparno Chakrabarti</h2>
+                <p class="card-intro">
+                  MBBS, MD <br />
+                  (Internal Medicine)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
-</body>
+    <!-- Articles about Doctors & speciality -->
+    <section class="articles">
+      <article id="aboutDoctorsSpecialities">
+        <div class="article-heading">
+          <h2 class="article-heading">
+            Articles about <br />
+            Doctors & Speciality
+          </h2>
+        </div>
+        <div class="hr-container">
+          <hr class="gradient-hr" />
+        </div>
+        <div class="articles-lists">
+          <div class="artcle">
+            <div class="card-articles" id="cardContainer1">
+              <div class="card-heading"><h2>Paediatrics</h2></div>
+              <div class="card-article-img">
+                <img src="./img/card_img_2.png" alt="" />
+              </div>
+              <div class="card-article-intro">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+                  beatae voluptates sit adipisci quasi veritatis eum inventore
+                  tenetur dolore minus.
+                </p>
+              </div>
+              <div class="card-font">
+                <img src="./img/up-right-arrow.png" alt="up right arrow" />
+              </div>
+            </div>
+          </div>
+          <div class="hr-container-1">
+            <hr class="gradient-hr" />
+          </div>
+          <div class="artcle">
+            <div class="card-articles" id="cardContainer2">
+              <div class="card-heading"><h2>Dermatology</h2></div>
+              <div class="card-article-img">
+                <img src="./img/card_img_1.png" alt="" />
+              </div>
+              <div class="card-article-intro">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+                  beatae voluptates sit adipisci quasi veritatis eum inventore
+                  tenetur dolore minus.
+                </p>
+              </div>
+              <div class="card-font">
+                <img src="./img/up-right-arrow.png" alt="up right arrow" />
+              </div>
+            </div>
+          </div>
+          <div class="hr-container">
+            <hr class="gradient-hr" />
+          </div>
+          <div class="artcle">
+            <div class="card-articles" id="cardContainer3">
+              <div class="card-heading"><h2>Paediatrics</h2></div>
+              <div class="card-article-img">
+                <img src="./img/card_img_2.png" alt="" />
+              </div>
+              <div class="card-article-intro">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+                  beatae voluptates sit adipisci quasi veritatis eum inventore
+                  tenetur dolore minus.
+                </p>
+              </div>
+              <div class="card-font">
+                <img src="./img/up-right-arrow.png" alt="up right arrow" />
+              </div>
+            </div>
+          </div>
+          <div class="hr-container-1">
+            <hr class="gradient-hr" />
+          </div>
+          <div class="artcle">
+            <div class="card-articles" id="cardContainer4">
+              <div class="card-heading"><h2>Dermatology</h2></div>
+              <div class="card-article-img">
+                <img src="./img/card_img_1.png" alt="" />
+              </div>
+              <div class="card-article-intro">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+                  beatae voluptates sit adipisci quasi veritatis eum inventore
+                  tenetur dolore minus.
+                </p>
+              </div>
+              <div class="card-font">
+                <img src="./img/up-right-arrow.png" alt="up right arrow" />
+              </div>
+            </div>
+          </div>
+          <div class="hr-container">
+            <hr class="gradient-hr" />
+          </div>
+          <div class="artcle">
+            <div class="card-articles" id="cardContainer5">
+              <div class="card-heading"><h2>Paediatrics</h2></div>
+              <div class="card-article-img">
+                <img src="./img/card_img_2.png" alt="" />
+              </div>
+              <div class="card-article-intro">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+                  beatae voluptates sit adipisci quasi veritatis eum inventore
+                  tenetur dolore minus.
+                </p>
+              </div>
+              <div class="card-font">
+                <img src="./img/up-right-arrow.png" alt="up right arrow" />
+              </div>
+            </div>
+          </div>
+          <div class="hr-container-1">
+            <hr class="gradient-hr" />
+          </div>
+          <div class="artcle">
+            <div class="card-articles" id="cardContainer6">
+              <div class="card-heading"><h2>Dermatology</h2></div>
+              <div class="card-article-img">
+                <img src="./img/card_img_1.png" alt="" />
+              </div>
+              <div class="card-article-intro">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+                  beatae voluptates sit adipisci quasi veritatis eum inventore
+                  tenetur dolore minus.
+                </p>
+              </div>
+              <div class="card-font">
+                <img src="./img/up-right-arrow.png" alt="up right arrow" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <footer class="footer" id="swup">
+      <div class="footer-header">
+        <h1>
+          We bring you <br />
+          Closer to Care
+        </h1>
+      </div>
+      <div class="footer-btn">
+        <button class="btn">Book Appointment</button>
+      </div>
+      <div class="footer-menu">
+        <ul>
+          <li class="footer-list"><a href="" class="footer-link">Home</a></li>
+          <li class="footer-list">
+            <a href="" class="footer-link">About Us</a>
+          </li>
+          <li class="footer-list">
+            <a href="" class="footer-link">Doctors at Aartas</a>
+          </li>
+          <li class="footer-list">
+            <a href="" class="footer-link">Aartas App</a>
+          </li>
+          <li class="footer-list">
+            <a href="" class="footer-link">Physical Space</a>
+          </li>
+          <li class="footer-list">
+            <a href="#navbar" class="footer-link">Locations</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-icons">
+        <div class="footer-icons-left">
+          <a
+            href="https://www.facebook.com/aartasofficial?paipv=0&eav=AfZFE4NslHsSBzRTmbjuY4lBpA4sobrxqGd14ObSL1W3BulsO6TuEqEjDqEGn6oY5PY&_rdr"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="https://www.instagram.com/aartasofficial/"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="https://twitter.com/AartasOfficial"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/company/aartas-clinishare/mycompany/"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </div>
+        <div class="footer-icons-right">
+          <a href="tel: +91 98103 66516"><i class="fa-solid fa-phone"></i></a>
+          <a href="#navbar"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+      </div>
+      <div class="footer-copy">
+        &copy; 2023 Aartas Care Pvt. Ltd. - All rights reserved
+      </div>
+    </footer>
+
+    <!--GSAP and other stylesheets -->
+
+    <script src="path/to/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+      gsap.registerPlugin();
+
+      const cardContainers = document.querySelectorAll(".card-articles");
+
+      function applyHoverAnimation(container) {
+        const heading = container.querySelector(".card-heading h2");
+        const articleImg = container.querySelector(".card-article-img img");
+        const cardFont = container.querySelector(".card-font img");
+
+        container.addEventListener("mouseenter", () => {
+          gsap.to(heading, { fontSize: "50px", ease: "power2.inOut" });
+          gsap.to(articleImg, { scale: 1, opacity: 1, ease: "power2.inOut" });
+          gsap.to(cardFont, { rotate: 45, ease: "power2.inOut" });
+        });
+
+        container.addEventListener("mouseleave", () => {
+          gsap.to(heading, { fontSize: "40px", ease: "power2.inOut" });
+          gsap.to(articleImg, { scale: 0, opacity: 0, ease: "power2.inOut" });
+          gsap.to(cardFont, { rotate: 0, ease: "power2.inOut" });
+        });
+      }
+
+      cardContainers.forEach((container) => applyHoverAnimation(container));
+
+      //footer scroll animation
+      gsap.to(".footer", {
+        scrollTrigger: {
+          trigger: ".footer",
+          toggleActions: "restart",
+          start: "top center",
+          end: "top -200px",
+          scrub: 1,
+        },
+        y: -200,
+        ease: "none",
+        duration: 1,
+      });
+    </script>
+  </body>
 </html>

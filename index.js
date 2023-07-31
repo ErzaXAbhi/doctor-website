@@ -1,0 +1,1 @@
+scrollReveal().reveal(".scroll-container", { delay: 500 })
